@@ -26,7 +26,7 @@
 
 
 
-**En exemple :** 
+**En exemple :**
 
 
 
@@ -39,4 +39,72 @@
 **curl -X DELETE http://localhost/ressource/1**
 
 
+
+**## Exemple concret : GET**
+
+**\*\*Contexte\*\* : récupération d’une page d’accueil.**  
+
+**\*\*URL\*\* : `http://dev.local/?search=livre`**  
+
+**\*\*Requête\*\* :**
+
+**- Méthode : GET**
+
+**- Headers : `Accept: text/html`**
+
+**- Corps : vide**  
+
+**\*\*Réponse\*\* :**
+
+**- Status : `200 OK`**
+
+**- Headers : `Content-Type: text/html`**
+
+**- Extrait du corps :**
+
+**```html**
+
+**<html><body>Résultats pour "livre"</body></html>**
+
+
+
+**Exemple concret : POST**
+
+
+
+**Contexte : envoi d’un formulaire d’inscription.**
+
+**URL : http://dev.local/register**
+
+**Requête :**
+
+
+
+**Méthode : POST**
+
+
+
+**Headers : Content-Type: application/x-www-form-urlencoded**
+
+
+
+**Corps : username=ali\&password=1234**
+
+**Réponse :**
+
+
+
+**Status : 201 Created**
+
+
+
+**Headers : Content-Type: application/json**
+
+
+
+**Extrait du corps :**
+
+
+
+**{"message": "Utilisateur créé"}**
 
